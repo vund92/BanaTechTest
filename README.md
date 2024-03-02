@@ -19,9 +19,9 @@ This project is a Maven-based Java project aimed at performing a challenge test 
 **Right click on Tests class at "src/test/java/tests/Tests.java" then choose "Run Test".** 
 **Check the results at Console.**
 
-_For example:_
+**For example:**
 
-_Qualitified Class Count = 57_
+_Qualitified Class Count = 57,_
 _Unqualitified Class Count = 943_
 ---
 _Teacher: , Qualified Classes: 0, Unqualified Classes: 112_

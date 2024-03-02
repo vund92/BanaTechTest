@@ -8,7 +8,6 @@ import java.util.List;
 import static tests.TeacherData.readTeacherDataFromCSVFile;
 
 public class Tests {
-
     @Test
     public static void printClassCountsForEachTeacherName() {
         String csvFile = "src/main/resources/MOCK_DATA.csv";
