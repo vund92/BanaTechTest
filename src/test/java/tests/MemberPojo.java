@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class MemberData {
+public class MemberPojo {
     private String name;
     private String minute;
 }

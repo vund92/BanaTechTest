@@ -5,19 +5,17 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static tests.TeacherData.readTeacherDataFromCSVFile;
-
 public class Tests {
     @Test
     public static void printClassCountsForEachTeacherName() {
         String csvFile = "src/main/resources/MOCK_DATA.csv";
-        List<TeacherData> teacherDataList = new ArrayList<>();
-        teacherDataList = readTeacherDataFromCSVFile(csvFile);
-        List<TeacherData> qualitifiedClasses = new ArrayList<>();
-        qualitifiedClasses = TeacherData.getQualifiedClasses(teacherDataList);
+        List<TeacherPojo> teacherPojoList = new ArrayList<>();
+        teacherPojoList = TeacherDataAnalyzer.readTeacherDataFromCSVFile(csvFile);
+        List<TeacherPojo> qualitifiedClasses = new ArrayList<>();
+        qualitifiedClasses = TeacherDataAnalyzer.getQualifiedClasses(teacherPojoList);
         System.out.println("Qualitified Class Count = " + qualitifiedClasses.size());
-        List<TeacherData> unqualitifiedClasses = new ArrayList<>();
-        unqualitifiedClasses = TeacherData.getUnqualifiedClasses(teacherDataList,qualitifiedClasses);
+        List<TeacherPojo> unqualitifiedClasses = new ArrayList<>();
+        unqualitifiedClasses = TeacherDataAnalyzer.getUnqualifiedClasses(teacherPojoList,qualitifiedClasses);
         System.out.println("Unqualitified Class Count = " + unqualitifiedClasses.size());
         System.out.println("-----");
         TeacherDataAnalyzer.printClassCountsAndSalary(qualitifiedClasses, unqualitifiedClasses);
