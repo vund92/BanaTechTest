@@ -46,7 +46,7 @@ public class TeacherDataAnalyzer {
 //            System.out.println("-----");
 //        }
 
-        String outputFile = "results.txt";
+        String outputFile = "Results_Report.txt";
 
         try (FileWriter writer = new FileWriter(new File(outputFile))) {
             // Write counts of qualified and unqualified classes
