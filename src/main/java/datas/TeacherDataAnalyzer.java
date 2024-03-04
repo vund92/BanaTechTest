@@ -75,10 +75,10 @@ public class TeacherDataAnalyzer {
 
                 System.out.println("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount);
                 System.out.println("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary);
-                System.out.println("-----");
+                System.out.println("-----\n");
             }
 
-            System.out.println("Results have been written to " + outputFile);
+            System.out.println("\n>>>>>>>> Results have been written to " + outputFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
