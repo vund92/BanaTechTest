@@ -17,13 +17,10 @@ public class Tests {
         String csvFile = "src/main/resources/MOCK_DATA.csv";
         List<Teacher> teacherList = new ArrayList<>();
         teacherList = readTeacherDataFromCSVFile(csvFile);
-        List<Teacher> qualitifiedClasses = new ArrayList<>();
-        qualitifiedClasses = getQualifiedClasses(teacherList);
-        System.out.println("Qualitified Class Count = " + qualitifiedClasses.size());
-        List<Teacher> unqualitifiedClasses = new ArrayList<>();
-        unqualitifiedClasses = getUnqualifiedClasses(teacherList,qualitifiedClasses);
-        System.out.println("Unqualitified Class Count = " + unqualitifiedClasses.size());
-        System.out.println("-----");
-        TeacherDataAnalyzer.printClassCountsAndSalary(qualitifiedClasses, unqualitifiedClasses);
+        List<Teacher> qualifiedClasses = new ArrayList<>();
+        qualifiedClasses = getQualifiedClasses(teacherList);
+        List<Teacher> unqualifiedClasses = new ArrayList<>();
+        unqualifiedClasses = getUnqualifiedClasses(teacherList,qualifiedClasses);
+        TeacherDataAnalyzer.printClassCountsAndSalary(qualifiedClasses, unqualifiedClasses);
     }
 }

@@ -4,6 +4,9 @@ import lombok.Data;
 import pojos.Member;
 import pojos.Teacher;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,18 +32,55 @@ public class TeacherDataAnalyzer {
             classCounts.get(teacherName)[1]++;
         }
 
-        // Print class counts for each teacher name
-        for (Map.Entry<String, int[]> entry : classCounts.entrySet()) {
-            String teacherName = entry.getKey();
-            int[] counts = entry.getValue();
-            int qualifiedCount = counts[0];
-            int unqualifiedCount = counts[1];
-            int salaryBeforeFine = qualifiedCount*10;
-            int fine = unqualifiedCount>=10?3:0;
-            int finalSalary = salaryBeforeFine - fine;
-            System.out.println("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount);
-            System.out.println("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary);
+//        // Print class counts for each teacher name
+//        for (Map.Entry<String, int[]> entry : classCounts.entrySet()) {
+//            String teacherName = entry.getKey();
+//            int[] counts = entry.getValue();
+//            int qualifiedCount = counts[0];
+//            int unqualifiedCount = counts[1];
+//            int salaryBeforeFine = qualifiedCount*10;
+//            int fine = unqualifiedCount>=10?3:0;
+//            int finalSalary = salaryBeforeFine - fine;
+//            System.out.println("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount);
+//            System.out.println("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary);
+//            System.out.println("-----");
+//        }
+
+        String outputFile = "results.txt";
+
+        try (FileWriter writer = new FileWriter(new File(outputFile))) {
+            // Write counts of qualified and unqualified classes
+            writer.write("Qualified Class Count = " + qualifiedClasses.size() + "\n");
+            writer.write("Unqualified Class Count = " + unqualifiedClasses.size() + "\n");
+            writer.write("-----\n");
+
+            System.out.println("Qualitified Class Count = " + qualifiedClasses.size());
+            System.out.println("Unqualitified Class Count = " + unqualifiedClasses.size());
             System.out.println("-----");
+
+            // Print class counts for each teacher name
+            for (Map.Entry<String, int[]> entry : classCounts.entrySet()) {
+                String teacherName = entry.getKey();
+                int[] counts = entry.getValue();
+                int qualifiedCount = counts[0];
+                int unqualifiedCount = counts[1];
+                int salaryBeforeFine = qualifiedCount * 10;
+                int fine = unqualifiedCount >= 10 ? 3 : 0;
+                int finalSalary = salaryBeforeFine - fine;
+
+                // Write data to the file
+                writer.write("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount + "\n");
+                writer.write("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary + "\n");
+                writer.write("-----\n");
+
+                System.out.println("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount);
+                System.out.println("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary);
+                System.out.println("-----");
+            }
+
+            System.out.println("Results have been written to " + outputFile);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
