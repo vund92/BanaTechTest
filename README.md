@@ -8,7 +8,9 @@ This project is a Maven-based Java project aimed at performing a challenge test 
 
 ## Dependencies
 - **OpenCSV:** Used for handling CSV files during testing.
+  
 - **Lombok:** Provides annotations to reduce boilerplate code in Java classes.
+  
 - **TestNG:** Testing framework used for writing and executing automated tests.
 
 ## Build Configuration
@@ -18,38 +20,40 @@ This project is a Maven-based Java project aimed at performing a challenge test 
 ## Executions
 **Right click on Tests class at "src/test/java/tests/Tests.java" then choose "Run Test".** 
 **Check the results at Console.**
+**Or check the results in Results_Report.txt**
 
 **For example:**
 
-_Qualitified Class Count = 57,_
-_Unqualitified Class Count = 943_
----
-_Teacher: , Qualified Classes: 0, Unqualified Classes: 112_
-_Salary Before Fine: $0, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $-3_
----
-_Teacher: Golden Eye-grass, Qualified Classes: 4, Unqualified Classes: 88_
-_Salary Before Fine: $40, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $37_
----
-_Teacher: New Mexico Locust, Qualified Classes: 5, Unqualified Classes: 105_
-_Salary Before Fine: $50, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $47_
----
-_Teacher: Utah Columbine, Qualified Classes: 5, Unqualified Classes: 91_
-_Salary Before Fine: $50, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $47_
----
-_Teacher: Belembe Silvestre, Qualified Classes: 5, Unqualified Classes: 98_
-_Salary Before Fine: $50, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $47_
----
-_Teacher: Mountain Rockcress, Qualified Classes: 8, Unqualified Classes: 95_
-_Salary Before Fine: $80, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $77_
----
-_Teacher: Mauka, Qualified Classes: 9, Unqualified Classes: 102_
-_Salary Before Fine: $90, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $87_
----
-_Teacher: Nesoluma, Qualified Classes: 8, Unqualified Classes: 92_
-_Salary Before Fine: $80, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $77_
----
-_Teacher: Mediterranean Rabbitsfoot Grass, Qualified Classes: 6, Unqualified Classes: 85_
-_Salary Before Fine: $60, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $57_
----
-_Teacher: Bushy Goldentop, Qualified Classes: 7, Unqualified Classes: 75_
-_Salary Before Fine: $70, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $67_
+Qualitified Class Count = 162
+Unqualitified Class Count = 838
+-----
+Teacher: , Qualified Classes: 0, Unqualified Classes: 112
+Salary Before Fine: $0, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $-3
+-----
+Teacher: Golden Eye-grass, Qualified Classes: 15, Unqualified Classes: 77
+Salary Before Fine: $150, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $147
+-----
+Teacher: New Mexico Locust, Qualified Classes: 22, Unqualified Classes: 88
+Salary Before Fine: $220, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $217
+-----
+Teacher: Utah Columbine, Qualified Classes: 11, Unqualified Classes: 85
+Salary Before Fine: $110, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $107
+-----
+Teacher: Belembe Silvestre, Qualified Classes: 18, Unqualified Classes: 85
+Salary Before Fine: $180, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $177
+-----
+Teacher: Mountain Rockcress, Qualified Classes: 20, Unqualified Classes: 83
+Salary Before Fine: $200, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $197
+-----
+Teacher: Mauka, Qualified Classes: 20, Unqualified Classes: 91
+Salary Before Fine: $200, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $197
+-----
+Teacher: Nesoluma, Qualified Classes: 23, Unqualified Classes: 77
+Salary Before Fine: $230, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $227
+-----
+Teacher: Mediterranean Rabbitsfoot Grass, Qualified Classes: 16, Unqualified Classes: 75
+Salary Before Fine: $160, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $157
+-----
+Teacher: Bushy Goldentop, Qualified Classes: 17, Unqualified Classes: 65
+Salary Before Fine: $170, Fine: $3, Final Salary = (SalaryBeforeFine)-Fine = $167
+-----
