@@ -32,20 +32,6 @@ public class TeacherDataAnalyzer {
             classCounts.get(teacherName)[1]++;
         }
 
-//        // Print class counts for each teacher name
-//        for (Map.Entry<String, int[]> entry : classCounts.entrySet()) {
-//            String teacherName = entry.getKey();
-//            int[] counts = entry.getValue();
-//            int qualifiedCount = counts[0];
-//            int unqualifiedCount = counts[1];
-//            int salaryBeforeFine = qualifiedCount*10;
-//            int fine = unqualifiedCount>=10?3:0;
-//            int finalSalary = salaryBeforeFine - fine;
-//            System.out.println("Teacher: " + teacherName + ", Qualified Classes: " + qualifiedCount + ", Unqualified Classes: " + unqualifiedCount);
-//            System.out.println("Salary Before Fine: $" + salaryBeforeFine + ", Fine: $" + fine + ", Final Salary = (SalaryBeforeFine)-Fine = $" + finalSalary);
-//            System.out.println("-----");
-//        }
-
         String outputFile = "Results_Report.txt";
 
         try (FileWriter writer = new FileWriter(new File(outputFile))) {
@@ -84,31 +70,6 @@ public class TeacherDataAnalyzer {
         }
     }
 
-//    public static List<Teacher> getQualifiedClasses(List<Teacher> teacherList){
-//        List<Teacher> qualifiedClasses = teacherList.stream()
-//                .filter(teacher -> !teacher.getTeacherName().isEmpty() &&
-//                        !teacher.getTeacherMinute().isEmpty() &&
-//                        Double.parseDouble(teacher.getTeacherMinute()) >= 90 &&
-//                        countQualifiedMembers(teacher.getMembers()) >= 1)
-//                .collect(Collectors.toList());
-//
-////        // Print the data
-////        for (Teacher teacherData : qualifiedClasses) {
-////            System.out.println(teacherData);
-////        }
-//
-//        return  qualifiedClasses;
-//    }
-
-//    private static long countQualifiedMembers(List<Member> members) {
-//        return members.stream()
-//                .filter(member ->
-//                        !member.getName().isEmpty() &&
-//                                !member.getMinute().isEmpty() &&
-//                                Double.parseDouble(member.getMinute()) >= 75)
-//                .count();
-//    }
-
     public static List<Teacher> getUnqualifiedClasses(List<Teacher> allTeachers, List<Teacher> qualifiedTeachers) {
         List<Teacher> unqualifiedTeachers = allTeachers.stream()
                 .filter(teacher -> !qualifiedTeachers.contains(teacher))
@@ -121,8 +82,6 @@ public class TeacherDataAnalyzer {
 
         return unqualifiedTeachers;
     }
-
-    //-----------------------------
 
     public static List<Teacher> getQualifiedClasses(List<Teacher> teacherList) {
         return teacherList.stream()
